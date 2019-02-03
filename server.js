@@ -18,4 +18,9 @@ app.get('/', (req, res) => {
 	res.render('index',{ title: 'Page title' });
 });
 
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 app.listen( port, () => console.log(`welcome to ${port}`));
