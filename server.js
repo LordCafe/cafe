@@ -15,11 +15,10 @@ app.use(  express.static(PUBLIC));
 
 
 app.get('/', (req, res) => {
-	res.render('index',{ title: 'Page title' });
+	res.render('index',{ title: 'Demo coffe!' });
 });
 
 app.use(function(err, req, res, next) {
-  console.error(err.stack);
   res.status(500).send('Something broke!');
 });
 

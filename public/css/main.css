@@ -16,3 +16,8 @@ nav, footer,.page-footer  {
 .max-height{
 	height: 100%;
 }
+
+.radios20{
+	border-radius: 20px;
+}
+
