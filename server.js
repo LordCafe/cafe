@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const  path= require('path');
 var expressLayouts = require('express-ejs-layouts');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3022;
 
 const PUBLIC = path.join(__dirname + '/public')
 
@@ -15,11 +15,24 @@ app.use(  express.static(PUBLIC));
 
 
 app.get('/', (req, res) => {
-	res.render('index',{ title: 'Demo coffe!' });
+	let portafolio = [
+		{},
+		{},
+		{},
+		{},
+		{},
+	];
+	res.render('index',
+		{ 
+
+			title: 'Demo coffe!',
+			portafolio : portafolio,
+
+	});
 });
 
 app.use(function(err, req, res, next) {
-  res.status(500).send('Something broke!');
+	res.status(500).send( `${err}`);
 });
 
 app.listen( port, () => console.log(`welcome to ${port}`));
