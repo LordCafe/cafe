@@ -1,0 +1,137 @@
+<div class="parallax-container">
+	<div class="row" >
+		<div  class=" valign-wrapper FLSan tCenter  black opacity6 white-text col s12 m7 margin-top20 padding10px" >
+			<span class=" grid ">let's drink a coffee cup with your ideas</span>
+		</div>	
+	</div>
+
+	<div class="parallax " >		
+		<img class="responsive-img  " src="img/thinkingCoffe.jpg">		
+	</div>
+</div>
+
+<div class=" row section  black ">
+	<div id="entry" class="row ">
+		
+		<% portafolio.forEach(function(user){ %>  
+		<%- include partials/portafolio %>
+		<% }); %>
+	</div>	
+</div>
+
+<div class="row white">
+	<div class="articleDemo">
+		<div class="row">
+			<div class="col s6 articleDemo ">
+				<div class="swiper-container2">
+					<div id="dos"  class="swiper-wrapper">
+						<% portafolio.forEach(function(user){ %>  
+						<%- include partials/sectionsScroll %>
+						<% }); %>
+					</div>
+
+				</div>
+				
+				
+				<div class="swiper-pagination2"></div>
+			</div>
+			<div class="col s6 green  right swiper-container articleDemo ">
+				
+				<div  id="Uno" class="swiper-wrapper">
+
+					<article class="swiper-slide" >
+						<div class="showreveal">
+							<img class=" responsive-img  " src="img/demo.jpg">
+							<div class="revealData">
+								<div class="  section   margin-top20 ">
+									<h3 class="black opacity5 tCenter grid 	"> title </h3>
+									<div class=" paddingText opacity5 black  tCenter text-white">let's drink a coffee cup with your ideas</div>	
+								</div>
+
+							</div>
+
+						</div>
+
+					</article>
+
+					<article class="swiper-slide">
+						<div class="showreveal">
+							<img class=" responsive-img  " src="img/demo.jpg">
+							<div class="revealData">
+								<div class="  section   margin-top20 ">
+									<h3 class="black opacity5 tCenter grid 	"> title </h3>
+									<div class=" paddingText opacity5 black  tCenter text-white">let's drink a coffee cup with your ideas</div>	
+								</div>
+
+							</div>
+
+						</div>
+
+					</article>
+
+					<article class="swiper-slide">
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+
+
+
+					<article class="swiper-slide">
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+					<article class="swiper-slide">
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+					<article class="swiper-slide">
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+				</div>
+				<div class="swiper-scrollbar"></div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+	let   options = {};
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.parallax');
+		var instances = M.Parallax.init(elems, options);
+
+		var elemsCarrusel = document.querySelectorAll('.carousel');
+		var instanceselemsCarrusel = M.Carousel.init( elemsCarrusel, options);
+
+		var elems = document.querySelectorAll('.slider');
+		var instances = M.Slider.init(elems, {'height' : 770, 'indicators' : true});
+
+		document.addEventListener('aos:out', ({ detail }) => {
+			console.log('animated in', detail);
+		});
+
+		
+	});
+</script>
